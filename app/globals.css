@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #000000;
+  --color-accent: #7630F4;
+  --color-secondary: #F2F2F2;
+  --color-muted: #CCCCCC;
+  --color-background: #000000;
+  --color-foreground: #FFFFFF;
+
+  --font-heading: var(--font-montserrat);
+  /* Maintaining Montserrat as geometric sans alternative to Graphik for now */
+  --font-body: var(--font-roboto);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #FFFFFF;
+  --primary: #000000;
+  --accent: #7630F4;
+  --secondary: #F2F2F2;
+  --muted: #CCCCCC;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 2px;
+  /* Sharper corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8a00d4;
 }
