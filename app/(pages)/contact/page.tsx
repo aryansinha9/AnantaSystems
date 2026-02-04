@@ -45,8 +45,8 @@ export default function ContactPage() {
                                 <Mail className="w-8 h-8 text-accent shrink-0" />
                                 <div>
                                     <p className="text-sm text-gray-400 mb-1 uppercase tracking-wide font-bold">Email</p>
-                                    <a href="mailto:contact@anantasystems.com" className="text-2xl font-bold text-white hover:text-accent transition-colors">
-                                        contact@anantasystems.com
+                                    <a href="mailto:systemsananta@gmail.com" className="text-2xl font-bold text-white hover:text-accent transition-colors">
+                                        systemsananta@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -55,8 +55,8 @@ export default function ContactPage() {
                                 <Phone className="w-8 h-8 text-accent shrink-0" />
                                 <div>
                                     <p className="text-sm text-gray-400 mb-1 uppercase tracking-wide font-bold">Phone</p>
-                                    <a href="tel:+61000000000" className="text-2xl font-bold text-white hover:text-accent transition-colors">
-                                        +61 000 000 000
+                                    <a href="tel:+61491021526" className="text-2xl font-bold text-white hover:text-accent transition-colors">
+                                        +61 491 021 526
                                     </a>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@ export default function ContactPage() {
                                 <div>
                                     <p className="text-sm text-gray-400 mb-1 uppercase tracking-wide font-bold">Office</p>
                                     <p className="text-2xl font-bold text-white">
-                                        Melbourne, Australia
+                                        Sydney, Australia
                                     </p>
                                 </div>
                             </div>
