@@ -44,7 +44,7 @@ export default function Footer() {
 
                     {/* Brand Column */}
                     <div className="md:col-span-1 space-y-6">
-                        <Link href="/" className="flex items-center gap-3">
+                        <Link href="/" className="flex flex-col items-start gap-2">
                             <Image
                                 src="/images/logo.png"
                                 alt="Ananta Systems Logo"
