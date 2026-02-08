@@ -47,7 +47,7 @@ const projects = [
         image: "/images/project-irl.png",
         description: "A web-based Game Master application for 'In Real Life Among Us' social deduction games. Synchronizes game state across players in real-time.",
         tech: ["Next.js", "Firebase Realtime DB", "Framer Motion"],
-        liveLink: "#", // Placeholder
+        liveLink: "https://irl-among-us.vercel.app/",
         features: ["Real-time Sync", "Role Assignment Logic", "Live Task Tracking", "Win Condition Automation"],
     },
 ];
@@ -166,22 +166,21 @@ export default function PortfolioPage() {
                             </button>
 
                             {/* Modal Left: Visual */}
-                            <div className="w-full md:w-1/2 bg-[#1a1a1a] relative overflow-hidden">
-                                <Image
-                                    src={selectedProject.image}
-                                    alt={selectedProject.title}
-                                    fill
-                                    className="object-cover opacity-60"
+                            <div className="w-full md:w-1/2 bg-[#1a1a1a] relative overflow-hidden h-[50vh] md:h-auto">
+                                <iframe
+                                    src={selectedProject.liveLink}
+                                    title={`${selectedProject.title} Preview`}
+                                    className="w-full h-full border-0"
+                                    allowFullScreen
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                                <div className="absolute bottom-12 left-12 z-10">
-                                    <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">{selectedProject.title}</h2>
-                                    <span className="text-accent text-sm font-bold uppercase tracking-widest">{selectedProject.category}</span>
-                                </div>
                             </div>
 
                             {/* Modal Right: Content */}
-                            <div className="w-full md:w-1/2 p-12 bg-[#111]">
+                            <div className="w-full md:w-1/2 p-8 md:p-12 bg-[#111] overflow-y-auto">
+                                <div className="mb-8 border-b border-white/10 pb-8">
+                                    <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-2">{selectedProject.title}</h2>
+                                    <span className="text-accent text-sm font-bold uppercase tracking-widest">{selectedProject.category}</span>
+                                </div>
                                 <div className="mb-8">
                                     <h3 className="text-xl font-bold text-white mb-4">Project Overview</h3>
                                     <p className="text-gray-400 leading-relaxed text-lg">
