@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { X, ExternalLink, Layout, ArrowRight } from "lucide-react";
+import { X, ExternalLink, ArrowRight } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import CTASection from "../../components/CTASection";
@@ -25,17 +25,17 @@ const projects = [
         title: "Melbourne West Driving School",
         category: "Driving Schools",
         image: "/images/project-mwd.png",
-        description: "A high-conversion booking platform that automated 100% of student enrollments, significantly reducing administrative overhead.",
+        description: "A fully responsive, client-focused web platform featuring structured sections for course offerings, pricing, testimonials, and contact information. Utilizes semantic HTML, modular CSS, and lightweight JavaScript to deliver cross-device compatibility, fast load times, and an intuitive user experience. The design emphasizes clarity, accessibility, and easy navigation, showcasing modern front-end development practices suitable for small business applications.",
         tech: ["React", "Node.js", "MongoDB", "Twilio API"],
         liveLink: "https://melbournewestdrivingschool.com.au",
-        features: ["Automated Scheduling", "SMS Reminders", "Instructor Management", "Mobile Optimized"],
+        features: ["Enhanced User Experience", "Cross-Device Compatibility", "Professional Presentation", "Optimized Load Performance"],
     },
     {
         id: 3,
         title: "UNO Driving School",
         category: "Driving Schools",
         image: "/images/project-uno.png",
-        description: "An SEO-first driving school platform featuring a complex suburb-data architecture to capture local search traffic effectively.",
+        description: "A client-focused web platform for a driving school, featuring an optional automated student enrollment system with integrated booking and PayPal payment processing, synchronized with a dynamic scheduling calendar. Implements SEO best practices, semantic HTML, modular CSS, and lightweight JavaScript to ensure fast load times, cross-device responsiveness, and high search engine visibility. Organized content sections include course listings, pricing details, testimonials, and contact information, providing a clear and structured user experience.",
         tech: ["Next.js", "Sanity CMS", "Vercel Analytics"],
         liveLink: "https://unodrivingschool.com.au",
         features: ["Dynamic Suburb Pages", "SEO Architecture", "Bulk Package Booking", "Fast Page Load"],
@@ -45,7 +45,7 @@ const projects = [
         title: "IRL Among Us",
         category: "Games / Side Projects",
         image: "/images/project-irl.png",
-        description: "A web-based Game Master application for 'In Real Life' social deduction games. Synchronizes game state across players in real-time.",
+        description: "A web-based Game Master application for 'In Real Life Among Us' social deduction games. Synchronizes game state across players in real-time.",
         tech: ["Next.js", "Firebase Realtime DB", "Framer Motion"],
         liveLink: "#", // Placeholder
         features: ["Real-time Sync", "Role Assignment Logic", "Live Task Tracking", "Win Condition Automation"],
@@ -166,9 +166,15 @@ export default function PortfolioPage() {
                             </button>
 
                             {/* Modal Left: Visual */}
-                            <div className="w-full md:w-1/2 bg-[#1a1a1a] p-12 flex items-center justify-center relative">
-                                <Layout className="w-32 h-32 text-gray-800" />
-                                <div className="absolute bottom-12 left-12">
+                            <div className="w-full md:w-1/2 bg-[#1a1a1a] relative overflow-hidden">
+                                <Image
+                                    src={selectedProject.image}
+                                    alt={selectedProject.title}
+                                    fill
+                                    className="object-cover opacity-60"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                                <div className="absolute bottom-12 left-12 z-10">
                                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-2">{selectedProject.title}</h2>
                                     <span className="text-accent text-sm font-bold uppercase tracking-widest">{selectedProject.category}</span>
                                 </div>
@@ -177,7 +183,7 @@ export default function PortfolioPage() {
                             {/* Modal Right: Content */}
                             <div className="w-full md:w-1/2 p-12 bg-[#111]">
                                 <div className="mb-8">
-                                    <h3 className="text-xl font-bold text-white mb-4">The Challenge</h3>
+                                    <h3 className="text-xl font-bold text-white mb-4">Project Overview</h3>
                                     <p className="text-gray-400 leading-relaxed text-lg">
                                         {selectedProject.description}
                                     </p>
