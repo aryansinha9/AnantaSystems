@@ -5,8 +5,15 @@ import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { Button } from "../../components/ui/Button";
+import { useActionState } from "react";
+import { sendContactEmail } from "@/app/actions/contact";
 
 export default function ContactPage() {
+    const [state, formAction, isPending] = useActionState(sendContactEmail, {
+        success: false,
+        message: "",
+    });
+
     return (
         <main className="min-h-screen bg-black text-white selection:bg-accent selection:text-white">
             <Navbar />
@@ -95,37 +102,56 @@ export default function ContactPage() {
                         className="bg-[#111] p-10 md:p-12"
                     >
                         <h3 className="text-2xl font-bold text-white mb-8 uppercase tracking-widest">Send a Message</h3>
-                        <form className="space-y-8">
+                        <form action={formAction} className="space-y-8">
+                            {state.success && (
+                                <div className="p-4 bg-green-500/10 border border-green-500/20 text-green-500 rounded-md">
+                                    {state.message}
+                                </div>
+                            )}
+                            {state.message && !state.success && (
+                                <div className="p-4 bg-red-500/10 border border-red-500/20 text-red-500 rounded-md">
+                                    {state.message}
+                                </div>
+                            )}
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-2 group">
                                     <label htmlFor="name" className="text-sm font-bold text-gray-400 uppercase tracking-widest group-focus-within:text-accent transition-colors">Name *</label>
-                                    <input type="text" id="name" className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="Enter your name" />
+                                    <input type="text" id="name" name="name" required className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="Enter your name" />
+                                    {state.errors?.name && <p className="text-red-500 text-sm">{state.errors.name[0]}</p>}
                                 </div>
                                 <div className="space-y-2 group">
                                     <label htmlFor="email" className="text-sm font-bold text-gray-400 uppercase tracking-widest group-focus-within:text-accent transition-colors">Email *</label>
-                                    <input type="email" id="email" className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="Enter your email" />
+                                    <input type="email" id="email" name="email" required className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="Enter your email" />
+                                    {state.errors?.email && <p className="text-red-500 text-sm">{state.errors.email[0]}</p>}
                                 </div>
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-2 group">
                                     <label htmlFor="phone" className="text-sm font-bold text-gray-400 uppercase tracking-widest group-focus-within:text-accent transition-colors">Phone</label>
-                                    <input type="tel" id="phone" className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="Optional" />
+                                    <input type="tel" id="phone" name="phone" className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="Optional" />
                                 </div>
                                 <div className="space-y-2 group">
                                     <label htmlFor="company" className="text-sm font-bold text-gray-400 uppercase tracking-widest group-focus-within:text-accent transition-colors">Company</label>
-                                    <input type="text" id="company" className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="Optional" />
+                                    <input type="text" id="company" name="company" className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="Optional" />
                                 </div>
                             </div>
 
                             <div className="space-y-2 group">
                                 <label htmlFor="message" className="text-sm font-bold text-gray-400 uppercase tracking-widest group-focus-within:text-accent transition-colors">Message *</label>
-                                <textarea id="message" rows={4} className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="How can we help?" />
+                                <textarea id="message" name="message" required rows={4} className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="How can we help?" />
+                                {state.errors?.message && <p className="text-red-500 text-sm">{state.errors.message[0]}</p>}
                             </div>
 
                             <div className="pt-4">
-                                <Button variant="primary" size="lg" className="w-full md:w-auto h-14 px-12 text-lg font-bold bg-accent hover:bg-white hover:text-black rounded-none">
-                                    SEND MESSAGE
+                                <Button
+                                    type="submit"
+                                    variant="primary"
+                                    size="lg"
+                                    className="w-full md:w-auto h-14 px-12 text-lg font-bold bg-accent hover:bg-white hover:text-black rounded-none"
+                                    isLoading={isPending}
+                                >
+                                    {isPending ? "SENDING..." : "SEND MESSAGE"}
                                 </Button>
                             </div>
                         </form>
