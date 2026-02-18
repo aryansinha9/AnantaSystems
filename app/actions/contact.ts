@@ -46,7 +46,7 @@ export async function sendContactEmail(
     try {
         const data = await resend.emails.send({
             from: "Ananta Systems <contact@email.anantasystems.com.au>",
-            to: ["systemsananta@gmail.com"],
+            to: ["aryan@anantasystems.com.au"],
             // Ideally this should be an env var like CONTACT_EMAIL_TO
             // But for now hardcoding to a placeholder or the user's email if I knew it.
             // I'll use a placeholder or ask the user.
