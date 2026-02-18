@@ -66,7 +66,7 @@ export async function sendContactEmail(
         if (data.error) {
             return {
                 success: false,
-                message: "Failed to send email. Please try again later.",
+                message: `Resend Error: ${data.error.message}`,
             };
         }
 
@@ -77,7 +77,7 @@ export async function sendContactEmail(
     } catch (error) {
         return {
             success: false,
-            message: "Something went wrong. Please try again.",
+            message: `Server Error: ${error instanceof Error ? error.message : JSON.stringify(error)}`,
         };
     }
 }
