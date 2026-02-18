@@ -46,7 +46,7 @@ export async function sendContactEmail(
     try {
         const data = await resend.emails.send({
             from: "Contact Form <onboarding@resend.dev>", // TODO: Update with your verified domain
-            to: ["aryansinha8424@gmail.com"], // Using the verified email for free tier testing
+            to: ["systemsananta@gmail.com"], // Sandbox: Can only send to the account email
             // Ideally this should be an env var like CONTACT_EMAIL_TO
             // But for now hardcoding to a placeholder or the user's email if I knew it.
             // I'll use a placeholder or ask the user.
