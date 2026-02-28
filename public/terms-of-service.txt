@@ -1,0 +1,204 @@
+ANANTA SYSTEMS
+Terms of Service
+Last Updated: 28 February 2026
+ABN: 12 300 501 601
+1. Introduction
+These Terms of Service ("Terms") constitute a legally binding agreement between Ananta Systems ("we," "us," or "our") and the person or entity ("Client") engaging our web development, design, maintenance, and related technology services ("Services").
+
+By signing a contract, paying a deposit or invoice, or otherwise engaging our Services, you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree, you must not engage or continue to use our Services.
+
+These Terms apply to all projects and engagements unless superseded by a separate written agreement signed by both parties.
+2. Definitions
+For the purposes of these Terms, the following definitions apply:
+
+•	"Client" means the individual, business, or entity engaging Ananta Systems to perform the Services.
+•	"End-User" means any person who visits, interacts with, or uses a website or application built or maintained by Ananta Systems on behalf of the Client.
+•	"Services" means all work performed by Ananta Systems, including but not limited to website design, development, hosting setup, domain configuration, form and booking integrations, payment gateway integrations, AI tool integrations, analytics setup, security configuration, and ongoing maintenance.
+•	"Deliverables" means the completed website, web application, source code, design assets, or any other output produced as part of the Services.
+•	"Third-Party Services" means external platforms and tools that may be integrated into a project, including but not limited to Supabase, Cloudflare, Stripe, PayPal, Resend, Google Analytics, and AI platforms.
+•	"Intellectual Property" or "IP" means all source code, design templates, graphics, written content, and other creative works developed in connection with the Services.
+3. Scope of Services
+Ananta Systems provides a range of web development and digital services. Unless expressly stated in writing, the following are included within the scope of a standard project:
+•	Website design and front-end development
+•	Back-end development and database configuration (e.g. using Supabase)
+•	Hosting setup recommendations and configuration guidance
+•	Domain setup and DNS configuration guidance
+•	Integration of contact forms, enquiry forms, and email notification systems (e.g. via Resend)
+•	Integration of booking systems and appointment scheduling tools
+•	Payment gateway integration (e.g. Stripe, PayPal)
+•	Security configuration including SSL/HTTPS, Cloudflare protection, and basic backup setup
+•	Analytics setup (e.g. Google Analytics)
+•	AI tool or chatbot integration where specifically agreed
+
+The following are NOT included in the Services unless separately agreed and confirmed in writing:
+•	Ongoing content creation, copywriting, or SEO services
+•	Ongoing marketing, advertising management, or social media management
+•	Graphic design beyond the scope of the agreed website
+•	Photography, videography, or procurement of licensed media
+•	Compliance advice (legal, tax, accessibility, or privacy law)
+•	Any work outside the agreed project scope, which will be subject to additional fees
+4. Client Obligations
+The Client agrees to the following obligations throughout the engagement:
+•	Provide accurate, complete, and lawful information, content, images, and materials required for the project in a timely manner
+•	Review and approve Deliverables within agreed timelines; unreasonable delays may result in project timeline adjustments at our discretion
+•	Respond promptly to requests for feedback, approvals, or clarification
+•	Ensure that all content and materials provided are owned by the Client, properly licensed, or otherwise lawfully available for use
+•	Follow our recommended security practices, including using strong passwords, enabling two-factor authentication where available, and maintaining regular backups
+•	Not interfere with, reverse-engineer, or modify any Deliverables during the development phase without prior written consent
+•	Ensure their own compliance with all applicable laws, including privacy laws, in relation to End-Users of their website
+•	Promptly notify us of any suspected security incidents, breaches, or unauthorised access affecting their website or related systems
+5. Payment Terms
+5.1 Fee Structure
+Fees for each project will be agreed upon in writing prior to commencement. Projects may be structured as a fixed-price engagement, milestone-based payments, or an hourly rate, as specified in the project proposal or invoice.
+5.2 Deposit
+A deposit of between 30% and 50% of the total project fee is required before work commences, unless otherwise agreed in writing. The deposit is non-refundable and confirms the Client's commitment to the project.
+5.3 Payment Methods
+We accept payment via bank transfer (EFT), and where available, via payment gateway (e.g. Stripe). All amounts are in Australian Dollars (AUD) and are exclusive of GST unless otherwise stated.
+5.4 Non-Refundable Payments
+All payments made are non-refundable once the corresponding work or milestone has been delivered or commenced, as applicable. This includes the initial deposit and all subsequent milestone payments.
+5.5 Late Payments
+Invoices are due within the timeframe specified on the invoice. If payment is not received by the due date:
+•	We reserve the right to suspend all work on the project until payment is received
+•	Interest may be charged on overdue amounts at a rate of 10% per annum, calculated daily
+•	We reserve the right to recover any reasonable costs incurred in collecting overdue amounts, including legal or debt collection fees
+6. Intellectual Property
+6.1 Ownership Prior to Full Payment
+All source code, design assets, templates, and Deliverables created by Ananta Systems remain the exclusive property of Ananta Systems until full payment of all outstanding fees has been received.
+6.2 Transfer of IP on Full Payment
+Upon receipt of full payment, Ananta Systems assigns to the Client all intellectual property rights in the custom code and design assets created specifically for that Client's project, excluding any reusable frameworks, libraries, or templates that form part of our general development toolkit (which are licensed to the Client on a non-exclusive basis).
+6.3 Client Content
+The Client retains all intellectual property rights in content, images, text, and materials provided to us. The Client warrants that they hold all necessary rights, licences, and permissions for any content supplied, and indemnifies Ananta Systems against any claim arising from the use of such content.
+6.4 Restrictions
+The Client must not copy, resell, redistribute, or sub-licence any templates, frameworks, or code developed by Ananta Systems without express prior written consent. Breach of this clause constitutes a material breach of these Terms.
+7. Revisions and Change Requests
+The number of included revisions will be specified in the project proposal or scope of work. Where no specific number is stated, a maximum of two rounds of revisions are included in the quoted price.
+
+Additional revisions or changes that fall outside the agreed project scope will be billed at our standard hourly rate, which will be communicated to the Client before additional work commences.
+
+Significant scope changes requested by the Client may require a revised project timeline and updated pricing. We will confirm any such adjustments in writing before proceeding.
+8. Third-Party Services
+In delivering the Services, we may integrate, configure, or recommend the following categories of Third-Party Services:
+•	Cloud infrastructure and CDN: Cloudflare
+•	Database and backend services: Supabase
+•	Payment gateways: Stripe, PayPal
+•	Email delivery services: Resend
+•	Analytics platforms: Google Analytics
+•	Artificial intelligence platforms and APIs
+•	Domain registrars, hosting providers, and CMS platforms as required
+
+Ananta Systems is not responsible for the performance, availability, security, pricing changes, policy updates, or discontinuation of any Third-Party Service. The Client acknowledges that their use of Third-Party Services is governed by those providers' own terms and conditions, and that Ananta Systems has no control over third-party platforms once integrated.
+
+We are not liable for any loss, damage, failed transactions, data breaches, or service outages caused by or attributable to Third-Party Services.
+9. AI Integration Disclaimer
+Where AI-powered features are integrated into a project (such as chatbots, automated messaging, content generation, or recommendation engines), the following applies:
+•	AI-generated outputs may occasionally be inaccurate, incomplete, inappropriate, or unexpected. Ananta Systems does not warrant the accuracy or reliability of any AI-generated content.
+•	Ananta Systems is not liable for any loss, damage, reputational harm, or legal liability arising from AI-generated outputs, errors, or unintended behaviours.
+•	The Client is responsible for monitoring, reviewing, and moderating any AI tool deployed on their platform and for ensuring compliance with applicable laws.
+•	The Client must not use any AI tool integrated into their website in a way that is unlawful, deceptive, harmful, or in breach of the terms of the relevant AI service provider.
+10. Maintenance and Support
+Ongoing maintenance and support services are not included in a standard project unless explicitly agreed in writing as a separate maintenance arrangement.
+
+Where maintenance is provided, the following applies:
+•	Security updates, plugin updates, and backups will be applied on a best-efforts basis. We do not guarantee that all updates will be applied immediately or that the website will remain completely free from vulnerabilities.
+•	We strongly recommend that Clients maintain their own independent backups of their website and data.
+•	Ananta Systems is not liable for data loss, downtime, or security incidents arising from a failure to perform maintenance, whether or not a maintenance arrangement is in place.
+11. Limitation of Liability
+To the maximum extent permitted by applicable Australian law, Ananta Systems is not liable for any of the following, whether arising in contract, tort, or otherwise:
+•	Hacking, malware, unauthorised access, or data breaches affecting the Client's website, systems, or data
+•	Spam, phishing emails, or malicious activity generated through or targeting forms, email systems, or automated tools on the Client's website
+•	Downtime, outages, or service interruptions of the Client's website or any Third-Party Service
+•	Loss or corruption of data, including backups lost due to Client actions, hosting failures, or third-party incidents
+•	Failed or erroneous transactions, double bookings, or errors arising from payment gateway or booking system integrations
+•	Loss of revenue, loss of profits, loss of business, or any indirect or consequential loss arising from the use of the Services or Deliverables
+•	Inaccuracies, errors, or unintended outputs generated by AI tools or analytics integrations
+•	Any reliance by the Client or their End-Users on information, content, or recommendations provided through the website
+
+Where liability cannot be excluded by law, our total liability to the Client for any claim arising in connection with the Services is limited to the total amount paid by the Client to Ananta Systems for the specific project to which the claim relates.
+12. Client Warranties
+By engaging our Services, the Client warrants and represents that:
+•	All content, images, text, data, and materials provided to Ananta Systems are owned by the Client or are used with appropriate licence or permission, and do not infringe the intellectual property rights of any third party
+•	The Client has the legal right to collect, store, and process personal data from End-Users in accordance with the Australian Privacy Act 1988 and any other applicable privacy laws
+•	The Client will follow our recommended security practices and take reasonable steps to maintain the security of their website and systems
+•	The Client will not use the Deliverables for any unlawful, fraudulent, or harmful purpose
+•	All information provided to Ananta Systems in connection with the project is accurate and complete to the best of the Client's knowledge
+13. Data Handling and Privacy
+Our collection and handling of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference and can be found at anantasystems.com.au/privacy-policy.
+
+By engaging our Services, the Client agrees to our data handling practices as described in the Privacy Policy. The Client acknowledges that:
+•	Ananta Systems acts as a Data Processor in relation to any End-User personal data collected through websites we build or maintain
+•	The Client is the Data Controller and is solely responsible for ensuring their own compliance with the Australian Privacy Act 1988 and any other applicable privacy legislation in relation to their End-Users
+•	The Client must maintain and publish their own privacy policy on their website and ensure End-Users are adequately informed about how their data is collected and used
+14. Warranty Disclaimer
+All Deliverables and Services are provided "as is" and "as available." Ananta Systems makes no guarantee, representation, or warranty, express or implied, as to:
+•	Specific traffic levels, search engine rankings, or conversion rates achieved through the website
+•	Continuous, uninterrupted, or error-free operation of the website
+•	Absolute security or protection from hacking, malware, or unauthorised access
+•	The accuracy, completeness, or reliability of AI-generated or analytics-generated outputs
+•	The compatibility of the website with all devices, browsers, or future software updates
+•	The performance or reliability of any Third-Party Service integrated into the project
+15. Refunds and Cancellations
+15.1 Cancellation by the Client
+If the Client wishes to terminate the engagement before project completion, the Client must notify Ananta Systems in writing. The following applies:
+•	All payments made up to the point of cancellation are non-refundable
+•	If work has been completed beyond what has been paid for, the Client remains liable for fees for all work completed up to the date of cancellation, which will be invoiced accordingly
+•	Any Deliverables remain the property of Ananta Systems until all outstanding fees are paid in full
+15.2 Cancellation by Ananta Systems
+Ananta Systems reserves the right to terminate an engagement in circumstances including, but not limited to, non-payment, Client misconduct, or a fundamental breakdown in the working relationship. In such circumstances:
+•	We will provide reasonable notice where practicable
+•	Any unused portion of fees paid in advance for work not yet commenced will be refunded
+•	Fees for all work completed to the point of termination remain payable
+16. Force Majeure
+Ananta Systems is not liable for any delay or failure to perform our obligations under these Terms where such delay or failure arises from circumstances beyond our reasonable control, including but not limited to:
+•	Natural disasters, floods, fires, or extreme weather events
+•	Power outages or internet service disruptions
+•	Outages, API changes, or discontinuation of Third-Party Services
+•	Government actions, legislation, or regulatory requirements
+•	Pandemic, public health emergencies, or other unforeseen events
+
+In such circumstances, we will notify the Client as soon as reasonably practicable and will use reasonable efforts to resume performance.
+17. Indemnification
+The Client agrees to indemnify, defend, and hold harmless Ananta Systems, its contractors, and agents from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising out of or relating to:
+•	The Client's breach of these Terms
+•	Any content, materials, or data provided by the Client that infringes the intellectual property or other rights of a third party
+•	The Client's failure to comply with applicable laws, including privacy legislation
+•	Any claim by an End-User arising from the Client's website, its content, or its operation
+•	The Client's misuse of any AI tool, payment system, or Third-Party Service integrated into their website
+18. Termination
+Either party may terminate the engagement by providing written notice. Upon termination:
+•	All outstanding fees for work completed to the date of termination become immediately due and payable
+•	Ananta Systems will cease all work on the project
+•	Access credentials, files, or assets held by Ananta Systems will be returned to the Client upon receipt of all outstanding payments
+•	Clauses relating to intellectual property, limitation of liability, indemnification, and governing law survive termination
+19. Governing Law and Dispute Resolution
+These Terms are governed by the laws of New South Wales, Australia. The parties irrevocably submit to the exclusive jurisdiction of the courts of New South Wales for any dispute arising in connection with these Terms.
+
+Before initiating formal legal proceedings, both parties agree to attempt to resolve any dispute through good faith negotiation for a period of at least 30 days from written notice of the dispute. If the dispute is not resolved through negotiation, either party may pursue mediation or legal proceedings through the appropriate courts.
+20. Acceptance of Terms
+The Client agrees to and accepts these Terms by any of the following actions:
+•	Signing a project contract or statement of work that references these Terms
+•	Paying a deposit or invoice issued by Ananta Systems
+•	Clicking an 'I agree' button or otherwise accepting terms through an e-signature or online platform
+•	Continuing to engage our Services after being provided with these Terms
+
+These Terms, together with any project proposal, statement of work, or invoice, constitute the entire agreement between the parties in relation to the Services and supersede all prior discussions, representations, or agreements.
+21. Updates to These Terms
+Ananta Systems reserves the right to update or modify these Terms at any time. The updated version will be indicated by a revised Last Updated date. Updated Terms apply to new projects commencing after the date of the update and do not apply retrospectively to projects already underway, unless agreed in writing by both parties.
+
+We encourage Clients to review these Terms periodically. Continued engagement with our Services following any update constitutes acceptance of the revised Terms.
+22. Miscellaneous
+•	Severability: If any provision of these Terms is found to be unlawful, void, or unenforceable, that provision will be severed and the remaining Terms will continue in full force and effect.
+•	No Waiver: Our failure to enforce any provision of these Terms does not constitute a waiver of that right.
+•	No Partnership: Nothing in these Terms creates a joint venture, partnership, employment, or agency relationship between Ananta Systems and the Client.
+•	Entire Agreement: These Terms, together with any project proposal or invoice, constitute the entire agreement between the parties and supersede all prior agreements and understandings.
+•	Electronic Communications: The parties agree that communications via email and other electronic means are valid and legally binding.
+23. Contact Us
+For any questions, concerns, or notices relating to these Terms, please contact us:
+
+Business Name: Ananta Systems
+Contact Person: Aryan Sinha
+Email: aryan@anantasystems.com.au
+Phone: 0491 021 526
+Location: Sydney, New South Wales, Australia
+ABN: 12 300 501 601
+
+We will endeavour to respond to all enquiries within a reasonable timeframe.
