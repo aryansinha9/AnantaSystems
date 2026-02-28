@@ -12,6 +12,16 @@ import CTASection from "../../components/CTASection";
 const projects = [
     {
         id: 1,
+        title: "Eastern Creek SC",
+        category: "Sports & Events",
+        image: "/images/project-ecsc.png",
+        description: "A fully dynamic, high-performance web application built for a local soccer club to manage their online presence, streamline registrations, and engage their community. Includes a custom CMS for administrators.",
+        tech: ["Next.js", "Supabase", "Tailwind CSS"],
+        liveLink: "https://www.easterncreekfc.com/",
+        features: ["Custom Admin Dashboard", "Registration System", "Dynamic Content Management"],
+    },
+    {
+        id: 2,
         title: "King of the Pitch",
         category: "Sports & Events",
         image: "/images/project-kotp.png",

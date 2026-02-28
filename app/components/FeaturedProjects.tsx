@@ -8,6 +8,17 @@ import { ArrowRight, Trophy, Car, Gamepad2, Database } from "lucide-react";
 const projects = [
     {
         id: 1,
+        title: "Eastern Creek SC",
+        category: "Sports & Community",
+        description: "Official club portal built directly into a high-performance web app with seamless registration.",
+        stats: ["Custom CMS", "Dynamic Routing"],
+        icon: Trophy,
+        href: "/portfolio",
+        color: "bg-red-600",
+        image: "/images/project-ecsc.png"
+    },
+    {
+        id: 2,
         title: "King of the Pitch",
         category: "Sports Platform",
         description: "Full-stack sports platform with real-time scoring and Stripe payments.",
