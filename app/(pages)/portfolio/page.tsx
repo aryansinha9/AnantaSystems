@@ -19,6 +19,7 @@ const projects = [
         tech: ["Next.js", "Supabase", "Tailwind CSS"],
         liveLink: "https://www.easterncreekfc.com/",
         features: ["Custom Admin Dashboard", "Registration System", "Dynamic Content Management"],
+        hideIframe: true,
     },
     {
         id: 2,
@@ -177,12 +178,21 @@ export default function PortfolioPage() {
 
                             {/* Modal Left: Visual */}
                             <div className="w-full md:w-1/2 bg-[#1a1a1a] relative overflow-hidden h-[50vh] md:h-auto">
-                                <iframe
-                                    src={selectedProject.liveLink}
-                                    title={`${selectedProject.title} Preview`}
-                                    className="w-full h-full border-0"
-                                    allowFullScreen
-                                />
+                                {'hideIframe' in selectedProject && selectedProject.hideIframe ? (
+                                    <Image
+                                        src={selectedProject.image}
+                                        alt={`${selectedProject.title} Preview`}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                ) : (
+                                    <iframe
+                                        src={selectedProject.liveLink}
+                                        title={`${selectedProject.title} Preview`}
+                                        className="w-full h-full border-0"
+                                        allowFullScreen
+                                    />
+                                )}
                             </div>
 
                             {/* Modal Right: Content */}
