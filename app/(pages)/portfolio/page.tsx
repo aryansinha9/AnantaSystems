@@ -19,7 +19,6 @@ const projects = [
         tech: ["Next.js", "Supabase", "Tailwind CSS"],
         liveLink: "https://www.easterncreekfc.com/",
         features: ["Custom Admin Dashboard", "Registration System", "Dynamic Content Management"],
-        hideIframe: true,
     },
     {
         id: 2,
