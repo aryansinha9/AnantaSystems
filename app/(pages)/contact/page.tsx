@@ -5,14 +5,45 @@ import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { Button } from "../../components/ui/Button";
-import { useActionState } from "react";
-import { sendContactEmail } from "@/app/actions/contact";
+import { useState } from "react";
 
 export default function ContactPage() {
-    const [state, formAction, isPending] = useActionState(sendContactEmail, {
-        success: false,
-        message: "",
-    });
+    const [result, setResult] = useState("");
+    const [isPending, setIsPending] = useState(false);
+    const [statusType, setStatusType] = useState<"success" | "error" | "">("");
+
+    const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setIsPending(true);
+        setResult("");
+        setStatusType("");
+
+        const formData = new FormData(event.currentTarget);
+        formData.append("access_key", "1fc805e1-5768-435b-9f56-62b51308adca");
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+                setResult("Success! Your message has been sent. We'll get back to you shortly.");
+                setStatusType("success");
+                (event.target as HTMLFormElement).reset();
+            } else {
+                setResult("Error: " + data.message);
+                setStatusType("error");
+            }
+        } catch (error) {
+            setResult("Something went wrong. Please try again.");
+            setStatusType("error");
+        } finally {
+            setIsPending(false);
+        }
+    };
 
     return (
         <main className="min-h-screen bg-black text-white selection:bg-accent selection:text-white">
@@ -102,27 +133,25 @@ export default function ContactPage() {
                         className="bg-[#111] p-10 md:p-12"
                     >
                         <h3 className="text-2xl font-bold text-white mb-8 uppercase tracking-widest">Send a Message</h3>
-                        <form action={formAction} className="space-y-8">
-                            {state.success && (
+                        <form onSubmit={onSubmit} className="space-y-8">
+                            {statusType === "success" && (
                                 <div className="p-4 bg-green-500/10 border border-green-500/20 text-green-500 rounded-md">
-                                    {state.message}
+                                    {result}
                                 </div>
                             )}
-                            {state.message && !state.success && (
+                            {statusType === "error" && (
                                 <div className="p-4 bg-red-500/10 border border-red-500/20 text-red-500 rounded-md">
-                                    {state.message}
+                                    {result}
                                 </div>
                             )}
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-2 group">
                                     <label htmlFor="name" className="text-sm font-bold text-gray-400 uppercase tracking-widest group-focus-within:text-accent transition-colors">Name *</label>
                                     <input type="text" id="name" name="name" required className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="Enter your name" />
-                                    {state.errors?.name && <p className="text-red-500 text-sm">{state.errors.name[0]}</p>}
                                 </div>
                                 <div className="space-y-2 group">
                                     <label htmlFor="email" className="text-sm font-bold text-gray-400 uppercase tracking-widest group-focus-within:text-accent transition-colors">Email *</label>
                                     <input type="email" id="email" name="email" required className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="Enter your email" />
-                                    {state.errors?.email && <p className="text-red-500 text-sm">{state.errors.email[0]}</p>}
                                 </div>
                             </div>
 
@@ -140,7 +169,6 @@ export default function ContactPage() {
                             <div className="space-y-2 group">
                                 <label htmlFor="message" className="text-sm font-bold text-gray-400 uppercase tracking-widest group-focus-within:text-accent transition-colors">Message *</label>
                                 <textarea id="message" name="message" required rows={4} className="w-full bg-transparent border-b-2 border-gray-700 px-0 py-3 text-white focus:outline-none focus:border-accent transition-all placeholder:text-gray-700 text-lg" placeholder="How can we help?" />
-                                {state.errors?.message && <p className="text-red-500 text-sm">{state.errors.message[0]}</p>}
                             </div>
 
                             <div className="pt-4">
