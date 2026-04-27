@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Monitor, Cpu, Gamepad2, ArrowRight, Construction } from "lucide-react";
+import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import CTASection from "../../components/CTASection";
@@ -74,9 +75,19 @@ export default function ServicesPage() {
                                     ))}
                                 </ul>
 
-                                <button className="inline-flex items-center text-white font-bold tracking-wide group-hover:underline decoration-accent underline-offset-4 mt-auto">
-                                    LEARN MORE <ArrowRight className="ml-2 w-4 h-4 text-accent" />
-                                </button>
+                                {/* Learn More — Website Development gets a real link, others coming soon */}
+                                {service.title === "Website Development" ? (
+                                    <Link
+                                        href="/services/web-development"
+                                        className="inline-flex items-center text-white font-bold tracking-wide group-hover:underline decoration-accent underline-offset-4 mt-auto"
+                                    >
+                                        LEARN MORE <ArrowRight className="ml-2 w-4 h-4 text-accent" />
+                                    </Link>
+                                ) : (
+                                    <button className="inline-flex items-center text-white font-bold tracking-wide group-hover:underline decoration-accent underline-offset-4 mt-auto">
+                                        LEARN MORE <ArrowRight className="ml-2 w-4 h-4 text-accent" />
+                                    </button>
+                                )}
                             </motion.div>
                         ))}
                     </div>

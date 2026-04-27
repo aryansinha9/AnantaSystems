@@ -9,7 +9,7 @@ const services = [
         title: "Web Development",
         description: "High-conversion, responsive websites with seamless UX/UI. We build digital storefronts that captivate and convert.",
         icon: Monitor,
-        href: "/services",
+        href: "/services/web-development",
     },
     {
         title: "Automation & Process",
