@@ -13,18 +13,21 @@ const services = [
         description: "We build responsive, high-conversion websites that serve as the digital face of your business. From simple landing pages to complex CMS solutions.",
         features: ["Responsive Design", "SEO Optimization", "CMS Integration", "Performance Tuning"],
         icon: Monitor,
+        href: "/services/web-development",
     },
     {
         title: "Automation & Process",
         description: "Streamline your operations with custom digital workflows. We help businesses save time by automating repetitive tasks like bookings and data entry.",
         features: ["Workflow Automation", "Booking Systems", "Data Processing", "Custom CRM Solutions"],
         icon: Cpu,
+        href: "/services",
     },
     {
         title: "Interactive Digital Solutions",
         description: "Engage your audience with immersive web experiences, games, and full-stack applications that push the boundaries of what's possible.",
         features: ["Web Games", "Interactive Storytelling", "Real-time Apps", "3D Web Experiences"],
         icon: Gamepad2,
+        href: "/services",
     },
 ];
 
@@ -58,36 +61,31 @@ export default function ServicesPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="group bg-[#111111] border-l-4 border-transparent hover:border-accent hover:bg-[#161616] p-10 transition-all duration-300 h-full flex flex-col"
+                                className="h-full"
                             >
-                                <div className="mb-8">
-                                    <service.icon className="w-12 h-12 text-white group-hover:text-accent transition-colors" />
-                                </div>
-                                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                                <p className="text-gray-400 mb-8 leading-relaxed flex-grow text-lg">{service.description}</p>
+                                <Link 
+                                    href={service.href} 
+                                    className="group block bg-[#111111] border-l-4 border-transparent hover:border-accent hover:bg-[#161616] p-10 transition-all duration-300 h-full flex flex-col cursor-pointer"
+                                >
+                                    <div className="mb-8">
+                                        <service.icon className="w-12 h-12 text-white group-hover:text-accent transition-colors" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                                    <p className="text-gray-400 mb-8 leading-relaxed flex-grow text-lg">{service.description}</p>
 
-                                <ul className="space-y-4 mb-8 border-t border-white/10 pt-8">
-                                    {service.features.map((feature) => (
-                                        <li key={feature} className="flex items-center text-sm text-gray-300 font-medium">
-                                            <span className="w-1 h-1 bg-accent mr-3" />
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
+                                    <ul className="space-y-4 mb-8 border-t border-white/10 pt-8">
+                                        {service.features.map((feature) => (
+                                            <li key={feature} className="flex items-center text-sm text-gray-300 font-medium">
+                                                <span className="w-1 h-1 bg-accent mr-3" />
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
 
-                                {/* Learn More — Website Development gets a real link, others coming soon */}
-                                {service.title === "Website Development" ? (
-                                    <Link
-                                        href="/services/web-development"
-                                        className="inline-flex items-center text-white font-bold tracking-wide group-hover:underline decoration-accent underline-offset-4 mt-auto"
-                                    >
-                                        LEARN MORE <ArrowRight className="ml-2 w-4 h-4 text-accent" />
-                                    </Link>
-                                ) : (
-                                    <button className="inline-flex items-center text-white font-bold tracking-wide group-hover:underline decoration-accent underline-offset-4 mt-auto">
-                                        LEARN MORE <ArrowRight className="ml-2 w-4 h-4 text-accent" />
-                                    </button>
-                                )}
+                                    <span className="inline-flex items-center text-white font-bold tracking-wide group-hover:underline decoration-accent underline-offset-4 mt-auto">
+                                        LEARN MORE <ArrowRight className="ml-2 w-4 h-4 text-accent transform group-hover:translate-x-1 transition-transform" />
+                                    </span>
+                                </Link>
                             </motion.div>
                         ))}
                     </div>
