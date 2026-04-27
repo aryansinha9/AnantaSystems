@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { X, ExternalLink, ArrowRight } from "lucide-react";
@@ -31,7 +32,7 @@ const projects = [
         features: ["Real-time Match Updates", "Automated League Tables", "Secure Payment Gateway", "Admin Dashboard"],
     },
     {
-        id: 2,
+        id: 3,
         title: "Melbourne West Driving School",
         category: "Driving Schools",
         image: "/images/project-mwd.png",
@@ -41,7 +42,7 @@ const projects = [
         features: ["Enhanced User Experience", "Cross-Device Compatibility", "Professional Presentation", "Optimized Load Performance"],
     },
     {
-        id: 3,
+        id: 5,
         title: "UNO Driving School",
         category: "Driving Schools",
         image: "/images/project-uno.png",
@@ -64,9 +65,21 @@ const projects = [
 
 const categories = ["All", "Driving Schools", "Sports & Events", "Games / Side Projects"];
 
-export default function PortfolioPage() {
+function PortfolioContent() {
+    const searchParams = useSearchParams();
+    const projectId = searchParams.get("project");
+
     const [filter, setFilter] = useState("All");
     const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+
+    useEffect(() => {
+        if (projectId) {
+            const proj = projects.find(p => p.id.toString() === projectId);
+            if (proj) {
+                setSelectedProject(proj);
+            }
+        }
+    }, [projectId]);
 
     const filteredProjects = projects.filter(p => filter === "All" || p.category === filter);
 
@@ -244,5 +257,17 @@ export default function PortfolioPage() {
                 )}
             </AnimatePresence>
         </main>
+    );
+}
+
+export default function PortfolioPage() {
+    return (
+        <Suspense fallback={
+            <main className="min-h-screen bg-black flex items-center justify-center text-white">
+                <div>Loading...</div>
+            </main>
+        }>
+            <PortfolioContent />
+        </Suspense>
     );
 }

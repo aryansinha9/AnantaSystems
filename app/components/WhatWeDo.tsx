@@ -66,25 +66,27 @@ export default function WhatWeDo() {
                             <motion.div
                                 key={service.title}
                                 variants={itemVariants}
-                                className="group relative h-full bg-[#111111] p-8 md:p-10 transition-colors duration-300 hover:bg-[#1a1a1a]"
+                                className="h-full"
                             >
-                                <div className="mb-8 text-accent">
-                                    <service.icon className="w-10 h-10" />
-                                </div>
-
-                                <h4 className="text-2xl font-bold text-white mb-4 group-hover:underline decoration-accent underline-offset-4">
-                                    {service.title}
-                                </h4>
-                                <p className="text-gray-400 mb-8 leading-relaxed text-lg">
-                                    {service.description}
-                                </p>
-
                                 <Link
                                     href={service.href}
-                                    className="inline-flex items-center text-base font-bold text-white transition-colors"
+                                    className="block group relative h-full bg-[#111111] p-8 md:p-10 transition-colors duration-300 hover:bg-[#1a1a1a]"
                                 >
-                                    <span className="mr-2">READ MORE</span>
-                                    <ArrowRight className="w-5 h-5 text-accent transform group-hover:translate-x-1 transition-transform" />
+                                    <div className="mb-8 text-accent">
+                                        <service.icon className="w-10 h-10" />
+                                    </div>
+
+                                    <h4 className="text-2xl font-bold text-white mb-4 group-hover:underline decoration-accent underline-offset-4">
+                                        {service.title}
+                                    </h4>
+                                    <p className="text-gray-400 mb-8 leading-relaxed text-lg">
+                                        {service.description}
+                                    </p>
+
+                                    <span className="inline-flex items-center text-base font-bold text-white transition-colors">
+                                        <span className="mr-2">READ MORE</span>
+                                        <ArrowRight className="w-5 h-5 text-accent transform group-hover:translate-x-1 transition-transform" />
+                                    </span>
                                 </Link>
                             </motion.div>
                         ))}

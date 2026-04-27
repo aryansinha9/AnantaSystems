@@ -29,7 +29,7 @@ const projects = [
         image: "/images/project-kotp.png"
     },
     {
-        id: 2,
+        id: 3,
         title: "Melbourne West Driving",
         category: "Business Automation",
         description: "Automated booking system boosting conversion and reducing admin time.",
@@ -40,7 +40,7 @@ const projects = [
         image: "/images/project-mwd.png"
     },
     {
-        id: 3,
+        id: 4,
         title: "IRL Among Us",
         category: "Interactive Game App",
         description: "Web-based gamemaster app for social deduction games with real-time sync.",
@@ -51,7 +51,7 @@ const projects = [
         image: "/images/project-irl.png"
     },
     {
-        id: 4,
+        id: 5,
         title: "UNO Driving School",
         category: "SEO & Data",
         description: "SEO-driven platform with suburb-specific data architecture.",
@@ -82,44 +82,46 @@ export default function FeaturedProjects() {
                         <motion.div
                             key={project.id}
                             whileHover={{ scale: 0.98 }}
-                            className="snap-center shrink-0 w-[300px] md:w-[400px] h-[500px] relative overflow-hidden group cursor-pointer bg-black border-none"
+                            className="snap-center shrink-0 w-[300px] md:w-[400px] h-[500px] bg-black border-none"
                         >
-                            {/* Background Image or Abstract Color */}
-                            {project.image ? (
-                                <Image
-                                    src={project.image}
-                                    alt={project.title}
-                                    fill
-                                    className="object-contain p-8 opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-                                />
-                            ) : (
-                                <div className={`absolute inset-0 ${project.color} opacity-40 group-hover:opacity-60 transition-opacity duration-500`} />
-                            )}
+                            <Link href={`/portfolio?project=${project.id}`} className="block relative w-full h-full overflow-hidden group cursor-pointer">
+                                {/* Background Image or Abstract Color */}
+                                {project.image ? (
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        fill
+                                        className="object-contain p-8 opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                                    />
+                                ) : (
+                                    <div className={`absolute inset-0 ${project.color} opacity-40 group-hover:opacity-60 transition-opacity duration-500`} />
+                                )}
 
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
 
-                            {/* Icon */}
-                            <div className="absolute top-8 left-8">
-                                <project.icon className="w-8 h-8 text-white/80" />
-                            </div>
-
-                            {/* Content Bottom */}
-                            <div className="absolute bottom-0 left-0 w-full p-8">
-                                <p className="text-xs font-bold tracking-widest uppercase mb-2 text-white/80">
-                                    {project.category}
-                                </p>
-                                <h3 className="text-3xl font-bold text-white mb-4 leading-tight group-hover:underline decoration-accent underline-offset-4">
-                                    {project.title}
-                                </h3>
-                                <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
-                                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                                        {project.description}
-                                    </p>
-                                    <Link href={project.href} className="inline-flex items-center text-white font-bold text-sm">
-                                        READ CASE STUDY <ArrowRight className="ml-2 w-4 h-4 text-accent" />
-                                    </Link>
+                                {/* Icon */}
+                                <div className="absolute top-8 left-8">
+                                    <project.icon className="w-8 h-8 text-white/80" />
                                 </div>
-                            </div>
+
+                                {/* Content Bottom */}
+                                <div className="absolute bottom-0 left-0 w-full p-8">
+                                    <p className="text-xs font-bold tracking-widest uppercase mb-2 text-white/80">
+                                        {project.category}
+                                    </p>
+                                    <h3 className="text-3xl font-bold text-white mb-4 leading-tight group-hover:underline decoration-accent underline-offset-4">
+                                        {project.title}
+                                    </h3>
+                                    <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
+                                        <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                                            {project.description}
+                                        </p>
+                                        <span className="inline-flex items-center text-white font-bold text-sm">
+                                            READ CASE STUDY <ArrowRight className="ml-2 w-4 h-4 text-accent" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </Link>
                         </motion.div>
                     ))}
                 </div>
