@@ -19,7 +19,7 @@ import QuizModal from "@/app/components/web-dev/QuizModal";
 import InquiryForm from "@/app/components/web-dev/InquiryForm";
 import BookingForm from "@/app/components/web-dev/BookingForm";
 import PackageCard from "@/app/components/web-dev/PackageCard";
-import { PACKAGES, RETAINER_INCLUDES, RETAINER_EXCLUDES } from "@/app/lib/packageData";
+import { PACKAGES, RETAINER_INCLUDES } from "@/app/lib/packageData";
 
 // ─────────────────────────────────────────────────────────────
 // Types for page-level state
@@ -313,39 +313,20 @@ export default function WebDevelopmentPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="space-y-8"
               >
                 {/* What's included */}
-                <div>
-                  <h3 className="text-sm font-bold uppercase tracking-widest text-white/50 mb-4 flex items-center gap-2">
-                    <Check size={14} className="text-accent" />
-                    What&apos;s included
-                  </h3>
-                  <ul className="space-y-3">
-                    {RETAINER_INCLUDES.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0" />
-                        <span className="text-sm text-white/60">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* What's not included */}
-                <div>
-                  <h3 className="text-sm font-bold uppercase tracking-widest text-white/50 mb-4 flex items-center gap-2">
-                    <X size={14} className="text-white/40" />
-                    Not included (quoted separately)
-                  </h3>
-                  <ul className="space-y-3">
-                    {RETAINER_EXCLUDES.map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 bg-white/20 rounded-full mt-2 shrink-0" />
-                        <span className="text-sm text-white/40">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <h3 className="text-sm font-bold uppercase tracking-widest text-white/50 mb-4 flex items-center gap-2">
+                  <Check size={14} className="text-accent" />
+                  What&apos;s included
+                </h3>
+                <ul className="space-y-3">
+                  {RETAINER_INCLUDES.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0" />
+                      <span className="text-sm text-white/60">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             </div>
           </div>
