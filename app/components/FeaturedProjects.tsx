@@ -61,6 +61,17 @@ const projects = [
         color: "bg-green-600",
         image: "/images/project-uno.png"
     },
+    {
+        id: 6,
+        title: "Doonside Hawks",
+        category: "Sports & Community",
+        description: "Dynamic web app for a local soccer club with custom CMS and streamlined registrations.",
+        stats: ["Custom Admin Dashboard", "SEO-Optimised"],
+        icon: Trophy,
+        href: "/portfolio",
+        color: "bg-yellow-600",
+        image: "/images/project-doonside.png"
+    },
 ];
 
 export default function FeaturedProjects() {

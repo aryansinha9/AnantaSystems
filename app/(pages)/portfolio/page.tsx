@@ -61,6 +61,16 @@ const projects = [
         liveLink: "https://irl-among-us.vercel.app/",
         features: ["Real-time Sync", "Role Assignment Logic", "Live Task Tracking", "Win Condition Automation"],
     },
+    {
+        id: 6,
+        title: "Doonside Hawks",
+        category: "Sports & Events",
+        image: "/images/project-doonside.png",
+        description: "A fully dynamic, high-performance web application built for a local soccer club to manage its online presence, streamline registrations, and improve community engagement. It also includes a custom CMS for administrators.",
+        tech: ["Next.js", "Custom CMS", "Tailwind CSS"],
+        liveLink: "https://www.doonsidehawks.com.au/",
+        features: ["Custom admin dashboard", "Clean, responsive UI", "Dynamic content management system", "SEO-optimised structure and content", "Integrated contact form"],
+    },
 ];
 
 const categories = ["All", "Driving Schools", "Sports & Events", "Games / Side Projects"];
