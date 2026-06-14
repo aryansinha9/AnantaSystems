@@ -76,7 +76,6 @@ const projects = [
         title: "Technica Football",
         category: "Sports & Events",
         image: "/images/TFLOGO.png",
-        hideIframe: true,
         description: "A modern, conversion-focused website built for a football development academy to showcase training programs, coaching methodology, and academy offerings while streamlining registrations, payments, and customer engagement through a seamless mobile-responsive experience.",
         tech: ["Next.js", "Custom CMS", "Tailwind CSS"],
         liveLink: "https://www.technicafootball.com.au/",
