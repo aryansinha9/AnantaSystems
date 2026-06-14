@@ -72,6 +72,17 @@ const projects = [
         color: "bg-yellow-600",
         image: "/images/project-doonside.png"
     },
+    {
+        id: 7,
+        title: "Technica Football",
+        category: "Sports & Community",
+        description: "A modern, conversion-focused website built for a football development academy with a seamless mobile-responsive experience.",
+        stats: ["Conversion Focused", "Premium UI"],
+        icon: Trophy,
+        href: "/portfolio",
+        color: "bg-blue-600",
+        image: "/images/project-technica.png"
+    },
 ];
 
 export default function FeaturedProjects() {
