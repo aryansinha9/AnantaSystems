@@ -81,7 +81,7 @@ const projects = [
         icon: Trophy,
         href: "/portfolio",
         color: "bg-blue-600",
-        image: "/images/project-technica.png"
+        image: "/images/TFLOGO.png"
     },
 ];
 
