@@ -28,9 +28,9 @@ export const PACKAGES: PackageData[] = [
   {
     id: "starter",
     name: "Starter",
-    priceLabel: "$499",
-    priceNumeric: 499,
-    monthlyRetainer: "$20/month",
+    priceLabel: "$599",
+    priceNumeric: 599,
+    monthlyRetainer: "$40/month",
     delivery: "~5 business days",
     ctaLabel: "Get started",
     subjectLine: "Website enquiry — Starter package",

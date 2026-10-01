@@ -288,7 +288,7 @@ export default function WebDevelopmentPage() {
                 {/* Retainer pricing table */}
                 <div className="space-y-3">
                   {[
-                    { name: "Starter", price: "$20/month" },
+                    { name: "Starter", price: "$40/month" },
                     { name: "Growth", price: "$50/month" },
                     { name: "Pro", price: "Custom — agreed during scoping" },
                     { name: "Custom", price: "Custom — agreed during scoping" },
