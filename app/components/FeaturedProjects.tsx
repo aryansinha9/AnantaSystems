@@ -83,6 +83,17 @@ const projects = [
         color: "bg-blue-600",
         image: "/images/TFLOGO.png"
     },
+    {
+        id: 8,
+        title: "Safe-Gen Driving School",
+        category: "Business Automation",
+        description: "A bold, conversion-focused driving school website with a one-tap booking funnel and custom admin dashboard.",
+        stats: ["Custom Supabase CMS", "Booking Funnel"],
+        icon: Car,
+        href: "/portfolio",
+        color: "bg-green-600",
+        image: "/images/project-safegen.png"
+    },
 ];
 
 export default function FeaturedProjects() {

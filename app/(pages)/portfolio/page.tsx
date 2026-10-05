@@ -81,6 +81,16 @@ const projects = [
         liveLink: "https://www.technicafootball.com.au/",
         features: ["Conversion focused UX", "Responsive, mobile-first design", "Comprehensive Admin Dashboard", "Dynamic and Premium UI", "Scalable Component Architecture"],
     },
+    {
+        id: 8,
+        title: "Safe-Gen Driving School",
+        category: "Driving Schools",
+        image: "/images/project-safegen.png",
+        description: "A bold, conversion-focused website built from the ground up for a local driving school. It replaces placeholder content with a fast, mobile-first, multi-page site that showcases the instructor's story and real student success, funnels learners straight into a pre-filled booking enquiry, and gives the owner full control of their own content through a purpose-built admin dashboard.",
+        tech: ["JavaScript", "Supabase", "Custom CMS"],
+        liveLink: "https://www.safe-gen.com.au/",
+        features: ["Custom Supabase CMS", "Design-locked content editing with live previews", "One-tap enquiry booking funnel", "Road-inspired visuals, L & P plate branding and premium dark UI", "Hardened, production-grade security"],
+    },
 ];
 
 const categories = ["All", "Driving Schools", "Sports & Events", "Games / Side Projects"];
