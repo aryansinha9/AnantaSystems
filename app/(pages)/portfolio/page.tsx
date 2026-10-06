@@ -99,6 +99,7 @@ const projects = [
         description: "A cinematic, editorial-grade website rebuilt from the ground up for a football club - replacing a dated legacy site with a fast, mobile-first experience that tells the club's story, funnels families straight into registration, and hands the committee full control of their own content through a purpose-built admin dashboard.",
         tech: ["Vite", "Supabase", "Custom CMS"],
         liveLink: "https://www.parkleasfc.com.au/",
+        hideIframe: true,
         features: ["Custom Supabase CMS", "Design-locked content editing", "Cinematic hero, scroll-reveal motion & editorial typography", "Dynamic and Premium UI", "Hardened, production-grade security"],
     },
 ];
