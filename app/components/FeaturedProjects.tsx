@@ -94,6 +94,17 @@ const projects = [
         color: "bg-green-600",
         image: "/images/project-safegen.png"
     },
+    {
+        id: 9,
+        title: "Parklea SFC",
+        category: "Sports & Community",
+        description: "A cinematic, editorial-grade football club website with streamlined registration and a custom admin dashboard.",
+        stats: ["Custom Supabase CMS", "Cinematic UI"],
+        icon: Trophy,
+        href: "/portfolio",
+        color: "bg-red-600",
+        image: "/images/project-parklea.png"
+    },
 ];
 
 export default function FeaturedProjects() {

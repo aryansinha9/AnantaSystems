@@ -91,6 +91,16 @@ const projects = [
         liveLink: "https://www.safe-gen.com.au/",
         features: ["Custom Supabase CMS", "Design-locked content editing with live previews", "One-tap enquiry booking funnel", "Road-inspired visuals, L & P plate branding and premium dark UI", "Hardened, production-grade security"],
     },
+    {
+        id: 9,
+        title: "Parklea SFC",
+        category: "Sports & Events",
+        image: "/images/project-parklea.png",
+        description: "A cinematic, editorial-grade website rebuilt from the ground up for a football club - replacing a dated legacy site with a fast, mobile-first experience that tells the club's story, funnels families straight into registration, and hands the committee full control of their own content through a purpose-built admin dashboard.",
+        tech: ["Vite", "Supabase", "Custom CMS"],
+        liveLink: "https://www.parkleasfc.com.au/",
+        features: ["Custom Supabase CMS", "Design-locked content editing", "Cinematic hero, scroll-reveal motion & editorial typography", "Dynamic and Premium UI", "Hardened, production-grade security"],
+    },
 ];
 
 const categories = ["All", "Driving Schools", "Sports & Events", "Games / Side Projects"];
